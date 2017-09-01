@@ -214,7 +214,8 @@ PRODUCT_PACKAGES += \
 product packages += \
      libshims_ims \
      libshims_get_process_name \
-     libshims_legacy
+     libshims_legacy \
+     libshims_is_wifi_driver_loaded
 
 # Lights
 PRODUCT_PACKAGES += \
