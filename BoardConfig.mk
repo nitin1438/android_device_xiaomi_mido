@@ -149,6 +149,8 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 TARGET_NO_RPC := true
+
+#Build Legacy Support Functions
 TARGET_USE_LEGACY_SUPPORT := true
 
 #FileSystem
