@@ -213,7 +213,7 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     lights.msm8953
 
-# Media 
+# Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
@@ -274,13 +274,13 @@ PRODUCT_PACKAGES += \
     Stk
 
 # Libshims
-PRODUCT_PACKAGES += \
-    libshims_ims
+#PRODUCT_PACKAGES += \
+    #libshims_ims
 
 # Telephony packages
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    telephony-ext
+#PRODUCT_PACKAGES += \
+    #ims-ext-common \
+    #telephony-ext
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
