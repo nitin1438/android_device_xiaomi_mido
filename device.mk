@@ -165,7 +165,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8953 \
     libcurl \
-    libgnsspps
+    libgnsspps \
+    libshims_get_process_name
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
@@ -208,18 +209,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl
 
-# Libshims
-product packages += \
-     libshims_ims \
-     libshims_get_process_name \
-     libshims_legacy
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     lights.msm8953
 
-# Media
+# Media 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
@@ -278,6 +273,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     rild_socket \
     Stk
+
+# Libshims
+PRODUCT_PACKAGES += \
+    libshims_ims
 
 # Telephony packages
 PRODUCT_PACKAGES += \
