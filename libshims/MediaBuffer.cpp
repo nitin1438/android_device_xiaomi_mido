@@ -25,15 +25,15 @@ extern "C"
 #if defined(__LP64__)
 extern void _ZN7android13GraphicBufferC1EPK13native_handleNS0_16HandleWrapMethodEjjijmj(
 	void *self, const native_handle_t* handle,
-        android::GraphicBuffer::HandleWrapMethod method, 
-        uint32_t width, uint32_t height, android::PixelFormat format, 
+        android::GraphicBuffer::HandleWrapMethod method,
+        uint32_t width, uint32_t height, android::PixelFormat format,
         uint32_t layerCount, uint64_t usage, uint32_t stride);
 
 void _ZN7android13GraphicBufferC1EP19ANativeWindowBufferb(
 	void *self, ANativeWindowBuffer* buffer, bool keepOwnership)
 {
     _ZN7android13GraphicBufferC1EPK13native_handleNS0_16HandleWrapMethodEjjijmj(
-	self, buffer->handle, 
+	self, buffer->handle,
 	keepOwnership ? android::GraphicBuffer::TAKE_HANDLE : android::GraphicBuffer::WRAP_HANDLE,
 	buffer->width, buffer->height, buffer->format, (uint32_t)buffer->layerCount, 
 	buffer->usage, buffer->stride);
@@ -41,17 +41,17 @@ void _ZN7android13GraphicBufferC1EP19ANativeWindowBufferb(
 #else
 extern void _ZN7android13GraphicBufferC1EPK13native_handleNS0_16HandleWrapMethodEjjijyj(
 	void *self, const native_handle_t* handle,
-        android::GraphicBuffer::HandleWrapMethod method, 
-        uint32_t width, uint32_t height, android::PixelFormat format, 
+        android::GraphicBuffer::HandleWrapMethod method,
+        uint32_t width, uint32_t height, android::PixelFormat format,
         uint32_t layerCount, uint64_t usage, uint32_t stride);
 
 void _ZN7android13GraphicBufferC1EP19ANativeWindowBufferb(
 	void *self, ANativeWindowBuffer* buffer, bool keepOwnership)
 {
     _ZN7android13GraphicBufferC1EPK13native_handleNS0_16HandleWrapMethodEjjijyj(
-	self, buffer->handle, 
+	self, buffer->handle,
 	keepOwnership ? android::GraphicBuffer::TAKE_HANDLE : android::GraphicBuffer::WRAP_HANDLE,
-	buffer->width, buffer->height, buffer->format, buffer->layerCount, 
+	buffer->width, buffer->height, buffer->format, buffer->layerCount,
 	buffer->usage, buffer->stride);
 }
 #endif
