@@ -274,13 +274,13 @@ PRODUCT_PACKAGES += \
     Stk
 
 # Libshims
-#PRODUCT_PACKAGES += \
-    #libshims_ims
+PRODUCT_PACKAGES += \
+    libshims_ims
 
 # Telephony packages
-#PRODUCT_PACKAGES += \
-    #ims-ext-common \
-    #telephony-ext
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    telephony-ext
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
